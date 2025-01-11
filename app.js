@@ -3,7 +3,7 @@ import bodyParser from "body-parser"
 import { logger } from "./middlewares/logger.js"
 import { home } from "./controllers/Home.js"
 import { hello } from "./controllers/Hello.js"
-import bodyParser from "body-parser"
+import { demo, second } from "./middlewares/demo.js"
 
 export const app = express()
 const PORT = 5000
@@ -13,6 +13,8 @@ const PORT = 5000
 
 app.use(logger)
 app.use(bodyParser.json())
+app.use(demo)
+app.use(second)
 
 
 //controllers
