@@ -12,7 +12,7 @@ const PORT = 5000
 //middlewares
 
 app.use(logger)
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 app.use(demo)
 app.use(second)
 
