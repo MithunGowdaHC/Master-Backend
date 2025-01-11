@@ -1,5 +1,4 @@
 import express from "express"
-import bodyParser from "body-parser"
 import { logger } from "./middlewares/logger.js"
 import { home } from "./controllers/Home.js"
 import { hello } from "./controllers/Hello.js"
@@ -12,7 +11,6 @@ const PORT = 5000
 //middlewares
 
 app.use(logger)
-// app.use(bodyParser.json())
 app.use(demo)
 app.use(second)
 
