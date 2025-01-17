@@ -7,20 +7,17 @@ import { demo, second } from "./middlewares/demo.js"
 export const app = express()
 const PORT = 5000
 
-
 //middlewares
 
 app.use(logger)
 app.use(demo)
 app.use(second)
 
-
 //controllers
 
 app.get("/", home)
 
 app.get("/hello", hello)
-
 
 app.listen(PORT, ()=>{
     console.log(`Server is running at : ${PORT}`)
